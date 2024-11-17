@@ -3,13 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
-    <title>Project Name</title>
+    <title>STI Website</title> <!--Website title-->
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">    
+    <!-- Linking shoelace library below--> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/light.css">
+    <meta name="author" content="Zev.G">
+    <meta name="description" content="Itchy Downunder STI Website Page">
+    <meta name="keywords" content="STI, STD, Sexual  Health, LGBTQIA, Sex, Protection, ">
 </head>
+<!--ID Sexual Health Educational Website content begins below -->
 <body>
-    <h1> This is my STI website</h1>
-    <h2> learn about sti's</h2>
+    <div class="header">
+        <div class="header-item"><p>ID - <em>Sexual Health</em></p></div>
+        <div class="header-item"><a href="#home">Home</a></div>
+        <div class="header-item"><a href="#info">Info</a></div>
+        <div class="header-item"> <a href="#STI-Clinics">Clinic Reviews</a></div>
+    </div>
+<!--GSAP CODE HERE-->
+ <!-- my scrolling navigation bar and sound button is here  -->
+<nav id="traffic-light">
+    <sl-icon-button name="volume-up" id="sound-btn"></sl-icon-button>
+    <a href="#home" id="red" class="light"></a>
+    <a href="#info" id="yellow" class="light"></a>
+    <a href="#STI-Clinics" id="green" class="light"></a>
+</nav>
+<br>
 
-    <script src="main.js"></script>
+    <!--SECTION 1-->
+ <div id="home" class="content-section">
+    <sl-animation name="pulse" duration="2000" play>
+        <div class = "ParagraphBox">
+            <p class="Description">Hover on the dots to learn about STI's </p>
+        </div>
+    </sl-animation> 
+    <!-- Hotspots over STI image that show information when hovering-->
+    <div class="container">
+    <!--blue STI image below of HIV , eith hotspot descriptions-->
+        <img src="images/blue_sti.png" alt="STI blue vector image of HIV" class = "bluesti"  width="700">
+        <div class="hotspot sex" data-text="Safe sex is the best STI prevention method."></div>
+        <div class="hotspot sti" data-text="STI's are sexually transmitted diseases. 
+        Common types include Chlamydia, HIV and Herpes."></div>
+        <div class="hotspot treatment" data-text="Most common STI's are easily treatable."></div>
+    </div>
+    <div class = "charts-border">
+        <sl-animation name="bounce" duration="3000" play> <!--Shoelace animation over text-->
+            <p class="Description"><a href="https://nindss.health.gov.au/pbi-dashboard/">STI detection rates in Australia have been increasing over time (Click for data source)</a></p>
+        </sl-animation>
+        <sl-animation name="bounceInDown" duration="2000" iterations="1" play> <!-- Shoelace aniamtion over text-->
+            <img src="images/HealthGovSTDs.png" class="charts" alt="Please click the link">
+        </sl-animation>
+    </div>
+    <div class = "charts-border">
+        <sl-animation name="bounce" duration="4000" play>
+            <p class="Description"><a href="https://nindss.health.gov.au/pbi-dashboard/">STIs are most commonly detected amongst people aged 20-24 (Click for data source)</a></p>
+        </sl-animation>
+        <sl-animation name="bounceInDown" duration="3000" iterations="1" play> <!-- Shoelace animation over text-->
+            <img src="images/STINotifications.png" class="charts" alt="Please click the link">
+        </sl-animation>
+    </div>
+</div> 
+<br>
+    <!--SECTION 2-->
+    <!--Statistics & STI Clinic information below-->
+<div id="info" class="content-section">
+        <div class="dashboard">
+            <div class="shqclinic">
+                <h2>Free STI Clinic - SHQ in Perth CBD, WA</h2>
+                <p>Regular STI testing keeps everyone safe!</p>
+            </div>
+
+            <div class="statistics">
+                <h2>Aussie STI Statistics - Young Adults</h2>
+                <div><strong>Chlamydia</strong> 1 in 20</div>
+                <div><strong>Herpes</strong> 1 in 8</div>
+                <div><strong>HIV</strong> 1 in 10 are unaware</div>
+            </div>
+            <div class="safesex">
+                <h2>Safe sex tips</h2>
+                <ul>
+                    <li>Condoms and dental dams for oral sex are higly effective and the easiest method of preventing STI's. At the SHQ clinc, free condoms and dental dams are available!</li>
+                    <li>It is best to do STI testing each time you change partners for the safety of everyone invoved. Sexual health maintenance is sexy!</li>
+                    <li>Anonymous text services are available if you contract an STI. Contracting STI's isnt the end of the world! Most are highly treatable with medication. Early testing is key!</li>
+                </ul>
+            </div>
+
+            <svg width="400px" height="400px" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 705.21 899.997 h -37.1371 V 278.74 c 0 -72.0896 -49.7588 -133.014 -116.509 -150.369 V 47.18 c 0 -21.3599 -17.4763 -38.8362 -38.8362 -38.8362 s -38.8362 17.4763 -38.8362 38.8362 v 81.0704 c -66.8709 17.3549 -116.509 78.4005 -116.509 150.369 v 621.258 H 320.246 c -21.3599 0 -38.8362 17.4763 -38.8362 38.8362 s 17.4763 38.8362 38.8362 38.8362 h 384.963 c 21.3599 0 38.8362 -17.4763 38.8362 -38.8362 c -0.121363 -21.2385 -17.5977 -38.7148 -38.8362 -38.7148 Z" fill="#9fc8fe" /><path d="M 408.842 577.536 c -5.33997 0 -9.70903 -4.36907 -9.70903 -9.70903 V 294.397 c 0 -5.33997 4.36907 -9.70903 9.70903 -9.70903 s 9.70903 4.36907 9.70903 9.70903 V 567.827 c 0 5.33997 -4.36907 9.70903 -9.70903 9.70903 Z M 430.08 218.909 c -1.21363 0 -2.54862 -0.242725 -3.76225 -0.728178 c -4.97588 -2.06317 -7.28178 -7.76723 -5.21861 -12.7431 c 9.95177 -24.0299 42.7198 -33.7389 44.1761 -34.1029 c 5.09725 -1.45635 10.5586 1.45635 12.0149 6.67497 c 1.45635 5.09725 -1.45635 10.5586 -6.67497 12.0149 c -7.03905 2.06317 -26.3358 10.1945 -31.5543 22.9376 c -1.57772 3.64089 -5.21861 5.94678 -8.98085 5.94678 Z" fill="#ffffff"/>
+                <path d="M 498.893 39.291 m -8.73813 0 a 8.73813 8.73813 0 1 0 17.4763 0 a 8.73813 8.73813 0 1 0 -17.4763 0 Z" fill="#ffffff"/>
+            </svg>
+            <!-- this is my SVG of a condom above-->
+    </div>     
+</div>
+
+<!-- SECTION 3 Last section Image carousel for STI clinic-->
+<div id="STI-Clinics" class="content-section">
+    <div class="slideshow-container">
+        <!-- Section 3 title-->
+        <p class="Description">STI Clinic Reviews</p>
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+        <img src="images/lesbian.png" style="width:300px" alt="Please reload the page">
+        <div class="text">We visit SHQ clinic frequently as lesbians in an open relationship to be safe.</div>
+        </div>
+    
+        <div class="mySlides fade">
+        <img src="images/gay.png" style="width:300px" alt="Please reload the page">
+        <div class="text">We live happy, healthy  HIV+ lives with medication and help from SHQ.</div>
+        </div>
+    
+        <div class="mySlides fade">
+        <img src="images/hands_3d.png" style="width:300px" alt="Please reload the page">
+        <div class="text">STI's don't discriminate, and neither should people. Practise safe sex and kindess!</div>
+        </div>
+        
+        <!-- Next and previous buttons for image slider-->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <!-- The dots/circles indicating position on image slider-->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+<!-- END OF IMAGE CAROUSEL-->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> <!--GSAP CDN-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> <!--Scroll Trigger CDN-->
+<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/shoelace-autoloader.js"></script> <!--Shoelace CDN-->
+<script src="main.js"></script>
 </body>
 </html>
