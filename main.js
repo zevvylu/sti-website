@@ -1,5 +1,4 @@
-/* GSAP CODE BELOW - For scrolling navigation traffic light animation */
-
+/*GSAP CODE BELOW - For scrolling navigation traffic light animation*/
 // Register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,7 +9,7 @@ const lights = {
   green: document.getElementById("green")
 };
 
-// ScrollTrigger for home (Red Light)
+// ScrollTrigger for home (Red Light) - function below
 ScrollTrigger.create({
   trigger: "#home",
   start: "top center",
@@ -56,11 +55,9 @@ ScrollTrigger.create({
     gsap.to(lights.green, { backgroundColor: "#33cc33", opacity: 1 });
   }
 });
+/*GSAP CODE END------------------------------------------------------------*/
 
-/* GSAP CODE END------------------------------------------------------------ */
-
-
-/* SLIDESHOW CODE BELOW ----------------------------------------------------- */
+/*SLIDESHOW CODE BELOW-----------------------------------------------------*/
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -74,51 +71,33 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-// Loop below brief requirement
+// Loop below breif requirement
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-
-  // Boundary checks for slideIndex
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
-
-  // Hide all slides
+  if (n > slides.length) {slideIndex = 1};
+  if (n < 1) {slideIndex = slides.length};
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-  }
-
-  // Remove 'active' class from all dots
+  };
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-
-  // Show the current slide
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
-/* SLIDESHOW CODE END ----------------------------------------------------- */
+/*SLIDESHOW CODE END-----------------------------------------------------*/
 
-
-/* MUSIC CODE BELOW ------------------------------------------------------- */
-
-// Load background music and create the audio object
-const bgMusic = new Audio('audio/pixel-dreams-259187.mp3');
-bgMusic.preload = "auto";  // Preload the audio file for faster start
-
-// Get the sound button element
-const soundBtn = document.querySelector('#sound-btn');
-
-// Event listener for the sound button
+/*MUSIC CODE BELOW-------------------------------------------------------*/
+const bgMusic = new Audio('audio/pixel-dreams-259187.mp3')
+const soundBtn = document.querySelector('#sound-btn')
 soundBtn.addEventListener('click', () => {
-  if (bgMusic.paused) {
-    bgMusic.play(); // Play the music if it's paused
-    soundBtn.name = 'volume-up';  // Update the button icon (assumes you use FontAwesome or similar)
-  } else {
-    bgMusic.pause(); // Pause the music if it's playing
-    soundBtn.name = 'volume-mute';  // Update the button icon
+  if(bgMusic.paused){
+    bgMusic.play()
+    soundBtn.name = 'volume-up'
+  }else{
+    bgMusic.pause()
+    soundBtn.name = 'volume-mute'
   }
-});
-/* MUSIC CODE END ------------------------------------------------------- */
-
+})

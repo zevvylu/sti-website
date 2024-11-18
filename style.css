@@ -454,3 +454,88 @@ nav {
 
 /* END OF IMAGE CAROUSEL - Last section of website ------------------:)*/
  
+/* Media query for desktop size 1024px width */
+@media screen and (max-width: 1024px) {
+  p { font-size: 3vw; }
+  .dashboard {
+    max-width: 800px;
+    padding-left: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  .dashboard > * {
+    background: var(--bg, #f4f3f3);
+    border-radius: 2ch;
+    color: hsl(216, 77%, 12%);
+    padding: 2ch;
+    margin-top: 10px;
+  }
+  
+  .dashboard > * h2 {
+    margin-block: 0 1ch;
+  }
+  
+  .dashboard table {
+    border-collapse: collapse;
+  }
+  
+  .dashboard table td {
+    border-block-end: 1px solid;
+    padding-block: .66ch;
+  }
+  
+  .dashboard table th {
+    border-block-end: 4px double;
+    font-variant: small-caps;
+    font-weight: 500;
+    padding-block: 1ch 0.5ch;
+    text-align: start;
+    text-transform: lowercase;
+  }
+  
+  .dashboard table tr:nth-of-type(2) td {
+    padding-block-start: 1.33ch;
+  }
+  
+  .dashboard table :is(td, th):last-of-type {
+    text-align: end;
+  }
+  
+  .dashboard ul {
+    gap: 1.5ch;
+  }
+  
+  .dashboard ul li {
+    list-style-position: inside;
+  }
+  .statistics h2 {
+    grid-column: span 2;
+    text-align: center;
+}
+  .statistics > div {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid;
+    display: inline-grid;
+    font-size: 20px; /* Adjusted unit to 'px' (or use a valid unit like 'em' or 'rem') */
+    letter-spacing: -0.05em;
+    place-content: center;
+    text-align: center;
+    width: 240px;
+}
+
+.safesex h2 {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.icon {
+  margin-top: 100px;
+  margin-left: 25%;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+}
+}  
